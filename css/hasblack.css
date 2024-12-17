@@ -1,0 +1,71 @@
+p {
+    font-family: serif;
+    font-size: 16px;
+    color: azure;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ol {
+    font-family: serif, cursive;
+    font-size: 8;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1, h2, h3 {
+    font-family: serif;
+    color: black;
+}
+ 
+body {
+    font-family: serif;
+    color: azure;
+}
+
+li {
+    font-family: serif;
+    color: black;
+}
+
+title {
+    font-family: serif;
+    color: azure;
+}
+
+p {
+    font-family: serif;
+    color: black
+}
+
+a {
+    font-family: monospace;
+    color: azure;
+}
+
+h4 {
+    color:black;
+}
+
+.otherow {
+    
+    color: azure;
+}
+
+.otherowtwo {
+    
+    font-family: serif;
+    color: black;
+}
+
+.link {
+    
+    font-family: serif;
+    color: black;
+    text-decoration: underline
+}

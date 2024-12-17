@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Scripture Generator - Book of Mormon</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/hasblack.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">RYAN CIBART</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="aboutme.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="scriptures.html">Scriptures</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="generator.html">Scripture Generator</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('assets/img/bookofmormonvid.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1 class="otherow">Scripture Generator</h1>
+                        <span class="subheading">Generate a random scripture from the Book of Mormon.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="scripture-container">
+                        <input type="text" id="userName" placeholder="Enter your name" />
+                        <button class="generate-btn" onclick="generateScripture()">Generate Scripture</button>
+                        <p id="greetingText"></p>
+                        <p class="scripture-text" id="scriptureText">Click the button to generate a random scripture from the Book of Mormon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Ryan Cibart</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        // List of 10 random greetings
+        const greetings = [
+            "Wow, {name} is such a neat name! Here is a scripture for you, {name}.",
+            "Oh, what a special name you've got, {name}. I've got a scripture for you!",
+            "Hey, {name}, that's a beautiful name! Here's your scripture!",
+            "What a unique name, {name}! Let's see what scripture I have for you.",
+            "I love the name {name}! Here's a scripture just for you!",
+            "Hello, {name}! You've got a great name, and here is your scripture.",
+            "Wow, {name}, what a fantastic name! Here's a scripture that fits you.",
+            "Oh, {name}, what a wonderful name! Here's a scripture for you to enjoy.",
+            "What a special name, {name}! Here's a scripture for you to reflect on.",
+            "{name}, you've got a name that's full of character! Here's your scripture."
+        ];
+
+        // List of 25 random scriptures from the Book of Mormon
+        const scriptures = [
+            { reference: "1 Nephi 1:20", text: "And when the Jews heard these things they were angry with him; yea, even as with the prophets of old, whom they had cast out, and stoned, and slain; and they also sought his life, that they might take it away. But behold, I, Nephi, will show unto you that the tender mercies of the Lord are over all those whom he hath chosen, because of their faith, to make them mighty even unto the power of deliverance."},
+            { reference: "1 Nephi 3:7", text: "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them."},
+            { reference: "Mosiah 2:17", text: "And behold, I tell you these things that ye may learn wisdom; that ye may learn that when ye are in the service of your fellow beings ye are only in the service of your God."},
+            { reference: "Alma 32:21", text: "And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true."},
+            { reference: "Mosiah 15:9", text: "Having ascended into heaven, having the bowels of mercy; being filled with compassion towards the children of men; standing betwixt them and justice; having broken the bands of death, taken upon himself their iniquity and their transgressions, having redeemed them, and satisfied the demands of justice."},
+            { reference: "Mormon 9:27", text: "O then despise not, and wonder not, but hearken unto the words of the Lord, and ask the Father in the name of Jesus for what things soever ye shall stand in need. Doubt not, but be believing, and begin as in times of old, and come unto the Lord with all your heart, and work out your own salvation with fear and trembling before him."},
+            { reference: "Ether 12:27", text: "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them."}
+        ];
+
+        // Function to generate a random greeting and scripture
+        function generateScripture() {
+            const userName = document.getElementById("userName").value;
+            if (!userName) {
+                alert("Please enter your name.");
+                return;
+            }
+
+            // Randomly select a greeting and scripture
+            const randomGreetingIndex = Math.floor(Math.random() * greetings.length);
+            const randomGreeting = greetings[randomGreetingIndex].replace(/{name}/g, userName);
+            const randomIndex = Math.floor(Math.random() * scriptures.length);
+            const scripture = scriptures[randomIndex];
+
+            // Display the greeting and scripture
+            document.getElementById("greetingText").innerHTML = randomGreeting;
+            document.getElementById("scriptureText").innerHTML = `<strong>${scripture.reference}</strong><br>${scripture.text}`;
+        }
+    </script>
+
+</body>
+</html>
